@@ -1,6 +1,6 @@
 # 开发板教程
 侧信道评估板有
-sasebo <sup><a href=#ref1>[1]</a>,<a href=#ref2>[2]</a></sup> 和 sakura项目<sup><a href=#ref3>[3]</a></sup>两个项目。
+sasebo {::nomarkdown}<sup><a href=#ref1>[1]</a>,<a href=#ref2>[2]</a></sup>{:/} 和 sakura项目{::nomarkdown}<sup><a href=#ref3>[3]</a></sup>{:/}两个项目。
 
 ## SASEBO项目和SAKURA项目
 正解：
@@ -31,7 +31,7 @@ sakura项目是sasebo项目的后继。
 
 不同开发板之间的代码不能共用。
 
-  - 在github上有人改变了`sakura-g`的代码用于`sasebo-giii`<sup><a href=#ref4>[4]</a></sup>。
+  - 在github上有人改变了`sakura-g`的代码用于`sasebo-giii`{::nomarkdown}<sup><a href=#ref4>[4]</a></sup>{:/}。
 
 
 **开发板资料下载地址**
@@ -45,30 +45,53 @@ sakura项目是sasebo项目的后继。
 
 **使用iMPACT下载代码到开发板时所需的信息**
 
-<font size = 2>
+<!-- https://github.com/orgs/marp-team/discussions/217 -->
+<style scoped>
+table {
+  font-size: 11px;
+}
+</style>
+
+
+<!-- https://blog.jakelee.co.uk/displaying-complex-content-inside-jekyll-tables/ -->
 
 | 开发板        | 控制芯片型号           | flash ROM型号                            | 接口   | 加密芯片型号            | flash ROM型号                                  | 接口  | 备注                  |
 |------------|------------------|----------------------------------------|------|-------------------|----------------------------------------------|-----|---------------------|
 | SASEBO-W   | XC6SLX150 -FGG484 | M25P64                                 | CN7  |                   |                                              |     | 仅有一块FPGA            |
 | SASEBO-GII | XC3S400A         | ST45DB16D                              | CN7  | XC5VLX30 -1FFG324  | ST45DB16D                                    | CN4 |                     |
 | SAKURA-G   | XC6SLX9     | SPI PROM AT45DB321D                  | CN4  | XC6SLX75- 2CSG484C | SPI PROM  AT45DB321D                       | CN2 |                     |
-| SAKURA-X   | XC6LX45- 2FGG484C | BPI Flash Memory **XCF32P** VOG48C | CN10 | XC7K160T -1FBGC    | BPI Flash Memory PC*28F640P30*TF65 **28F128P30B** | CN5 | spec和qsg中rom 型号描述不一致 |
-
-</font>
+| SAKURA-X   | XC6LX45- 2FGG484C | {::nomarkdown}BPI Flash Memory <b>XCF32P</b> VOG48C{:/} | CN10 | XC7K160T -1FBGC    | {::nomarkdown}BPI Flash Memory PC<i>28F640P30</i>TF65 <b>28F128P30B</b>{:/} | CN5 | spec和qsg中rom 型号描述不一致 |
 
 **课题组拥有的几款板子**
 
-![](./Img/SASEBO-W.jpg)
-<center>图1</center>
+<center>
+<div align="center">
+  <img src="./Img/SASEBO-W.jpg" alt="Image" width="60%" height="60%">
+</div>
+</center>
+<center>图1 SASEBO-W</center>
 
-![](./Img/SASEBO-GII.jpg)
-<center>图2</center>
 
-![](./Img/SAKURA-X.jpg)
-<center>图3</center>
+<center>
+<div align="center">
+  <img src="./Img/SASEBO-GII.jpg" alt="Image" width="60%" height="60%">
+</div>
+</center>
+<center>图2 SASEBO-GII</center>
 
-![](./Img/SAKURA-G.jpg)
-<center>图4</center>
+<center>
+<div align="center">
+  <img src="./Img/SAKURA-X.jpg" alt="Image" width="60%" height="60%">
+</div>
+</center>
+<center>图3 SAKURA-X</center>
+
+<center>
+<div align="center">
+  <img src="./Img/SAKURA-G.jpg" alt="Image" width="60%" height="60%">
+</div>
+</center>
+<center>图4 SAKURA-G</center>
 
 ## 参考
 1. <p><a name = ref1></a>Side-channel Attack Standard Evaluation BOard (SASEBO).https://satoh.cs.uec.ac.jp/SASEBO/en/index.html</p>
