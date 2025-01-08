@@ -11,10 +11,6 @@ layout: home
             border-radius: 3px;
         }
 </style>
-首页应该是一些什么内容呢？
-
-我的publications应该放在哪里？
-
 # About me
 
 研究兴趣：形式化验证、侧信道掩码
