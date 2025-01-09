@@ -1,4 +1,14 @@
-# 开发板教程
+---
+layout: post
+title: "开发板简介"
+# tags: github_pages jekyll minima
+# image: /assets/img/projects/blog_setup/blog_setup_initial_title.png
+comments: true
+summary: "对课题组现有的四种开发板进行介绍。"
+---
+
+
+<!-- # 开发板教程 -->
 侧信道评估板有
 sasebo {::nomarkdown}<sup><a href=#ref1>[1]</a>,<a href=#ref2>[2]</a></sup>{:/} 和 sakura项目{::nomarkdown}<sup><a href=#ref3>[3]</a></sup>{:/}两个项目。
 

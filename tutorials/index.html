@@ -1,0 +1,31 @@
+---
+layout: page
+title: 侧信道掩码实现
+---
+<div>
+这个系列提供与侧信道开发板、掩码实现和TVLA评估等相关的内容。
+
+</div> </br>
+
+
+<div id="tutorials-list">
+  {% for project in site.tutorials %}
+  <div class="project-list">
+    <div id="#{{ project.name | slugize }}"></div>
+    <h3 class="post-list-heading line-bottom">
+      <a href="{{ project.url }}">{{ project.title }}</a>
+    </h3>
+    {{ project.content | markdownify }}
+      <ul class="post-list">
+      {% assign project_category = project.categories | first %}
+      {% for post in site.posts %}
+        {% if post.categories contains project_category %}
+        <li>
+          {% include post_preview.html post=post %}
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>

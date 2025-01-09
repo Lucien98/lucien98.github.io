@@ -1,0 +1,85 @@
+---
+layout: post
+title: "ISE软件安装"
+# tags: github_pages jekyll minima
+# image: /assets/img/projects/blog_setup/blog_setup_initial_title.png
+comments: true
+summary: "介绍在ISE安装过程中遇到的问题。"
+---
+
+<!-- # ISE软件安装 -->
+侧信道掩码防护的设计与评估是较为复杂的工程话题。这里面涉及到很多内容，例如
+
+  - 使用ISE生成`.bit`，`.mcs`文件并下载到开发板中
+  - 评估密码实现的面积
+
+为了完成上述两件事情，需要安装一些软件，拥有一些工艺库。
+
+
+## 需要的软件和工艺库
+
+  - ISE 14.7
+  - Synopsys EDA Tools
+  - Nangate 45nm, UMC 180nm
+
+## 安装ISE
+安装ISE主要按照[Win11安装ise14.7~不需要虚拟机了~](https://blog.csdn.net/hclrda/article/details/128951014)<sup><a href="#ref1">[1]</a></sup>这个教程。
+
+值得强调的是
+
+1. 安装好之后，ise无法仿真，也不能使用在线逻辑分析仪，因此ise的主要作用是生成和下载`.bit`和`.mcs`文件。
+2. 我在win10 系统上安装时，除了在84%左右要杀进程`webtalk.exe`之外；在93%处也卡住了，这时我出去吃了个饭，回来看到还是93%，于是我把`xiperl.exe`也杀了，之后没有出现问题。这个93%的问题，我在网上看到有人提过 -  [ISE installation failed](https://support.xilinx.com/s/question/0D52E00006iHuImSAK/ise-installation-failed?language=en_US)<sup><a href="#ref2">[2]</a></sup>，但是貌似没有人给出解决办法。
+
+
+
+## 下载器
+![](./Img/Download.jpg)
+<center>图1</center>
+
+使用Xilinx Platform Cable USB 下载`.mcs`或`.bit`文件到开发板上的线路连接如图所示。
+
+上图中的下载器是`Xilinx Platform Cable USB`。而在开发板的说明文档中，建议使用的下载器是`Xilinx Platform Cable USB ||`。
+
+![](./Img/Cable_USB_II.png)
+<center>图</center>
+
+*问题：这两种下载器的区别是什么？*...
+
+可以看到下载器上“STATUS”旁边的指示灯是绿色的。这表示状态正常。
+
+**指示灯的颜色**
+
+1. 当下载器未连接电脑时：不亮
+2. 当下载器连接了电脑，但是没有连接开发板，或者开发板未上电时：橙色
+3. 当下载器连接了电脑和开发板，一切正常时：绿色
+4. 当下载器连接了电脑和开发板，但驱动安装有问题时：**绿色**
+
+**说明**
+
+在企图将`.mcs`文件下载到板子里时，我遇到了情况1，后来又遇到了情况4。
+
+解决办法如下：<sup><a href="#ref3">[3]</a></sup>
+
+
+（1）在设备管理器界面，选中Xilinx USB Cable之后，右键将该驱动卸载；
+
+（2）在设备管理器界面，选中WinDriver之后，右键将该驱动卸载；
+
+（3）将Xilinx USB下载器从电脑USB接口断开！！！！
+
+（4）以**管理员**身份运行install_drivers.exe，即可实现重新安装。
+
+（5）最后，插上Xilinx USB下载器，即可。
+
+重点是第4步，教程<sup><a href="#ref3">[3]</a></sup>中提到，`install_drivers.exe`在ISE的安装路径（如：D:\ISE\14.4\ISE_DS\common\bin\nt64）文件夹里。我试了试，好像不行（也有可能我忘记用管理员权限了），最后用师兄发给我的`install_drivers.exe`弄成功了。
+
+在图1中，有下载器和开发板两样东西。
+
+但是下载器是xilinx的产品。因此安装的驱动是由xilinx开发的，当下载器出现问题时，应该是ISE安装的问题。
+
+在`quick start`教程中，还涉及到一个`FT Prog`软件。这个软件用于设置开发板上的USB芯片，是FTDI的产品。
+
+## 参考
+1. <p><a name = "ref1"></a>Win11安装ise14.7~不需要虚拟机了~.https://blog.csdn.net/hclrda/article/details/128951014</p>
+2. <p><a name = "ref2"></a>ISE installation failed.https://support.xilinx.com/s/question/0D52E00006iHuImSAK/ise-installation-failed?language=en_US</p>
+3. <p><a name = "ref3"></a>关于Xilinx下载器驱动安装及常见问题解决方法.https://blog.csdn.net/qq_22168673/article/details/90897883</p>
