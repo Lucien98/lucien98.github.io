@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 ---
 <style>
@@ -14,8 +11,6 @@ layout: default
 # About me
 
 研究兴趣：形式化验证、侧信道掩码
-
-<!-- 有关开发板的介绍请参考[开发板教程](./tutorials/boards/intro.md)。 -->
 
 # Publications
 **[2] Prover - Toward More Efficient Formal Verification of Masking in Probing Model**\

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "开发板简介"
-# tags: github_pages jekyll minima
-# image: /assets/img/projects/blog_setup/blog_setup_initial_title.png
 comments: true
 summary: "对课题组现有的四种开发板进行介绍。"
 ---
@@ -30,14 +28,10 @@ sakura项目是sasebo项目的后继。
 ## 现有开发板
 课题组拥有四种板子，分别是sasebo-w，sasebo-gii，sakura-x, sakura-g。
 
-<!-- 其中焦志鹏师兄对SM4的综合防护代码是基于sasebo-giii中的代码写的。 -->
-
 开发板之间的关系：
 
   - sasebo-giii和sakura-x之间的关系是：sakura-x是sasebo-giii的商业版本。
   - sakura-g高度兼容sasebo-gii
-
-<!-- 那么这个代码可以用于sakura-g吗？ -->
 
 不同开发板之间的代码不能共用。
 

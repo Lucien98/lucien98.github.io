@@ -1,13 +1,10 @@
 ---
 layout: post
 title: "ISE软件安装"
-# tags: github_pages jekyll minima
-# image: /assets/img/projects/blog_setup/blog_setup_initial_title.png
 comments: true
 summary: "介绍在ISE安装过程中遇到的问题。"
 ---
 
-<!-- # ISE软件安装 -->
 侧信道掩码防护的设计与评估是较为复杂的工程话题。这里面涉及到很多内容，例如
 
   - 使用ISE生成`.bit`，`.mcs`文件并下载到开发板中
