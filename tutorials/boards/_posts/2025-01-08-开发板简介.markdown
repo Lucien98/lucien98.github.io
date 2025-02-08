@@ -64,7 +64,7 @@ table {
 | SASEBO-W   | XC6SLX150 -FGG484 | M25P64                                 | CN7  |                   |                                              |     | 仅有一块FPGA            |
 | SASEBO-GII | XC3S400A         | ST45DB16D                              | CN7  | XC5VLX30 -1FFG324  | ST45DB16D                                    | CN4 |                     |
 | SAKURA-G   | XC6SLX9     | SPI PROM AT45DB321D                  | CN4  | XC6SLX75- 2CSG484C | SPI PROM  AT45DB321D                       | CN2 |                     |
-| SAKURA-X   | XC6LX45- 2FGG484C | {::nomarkdown}BPI Flash Memory <b>XCF32P</b> VOG48C{:/} | CN10 | XC7K160T -1FBGC    | {::nomarkdown}BPI Flash Memory PC<i>28F640P30</i>TF65 <b>28F128P30B</b>{:/} | CN5 | spec和qsg中rom 型号描述不一致 |
+| SAKURA-X   | XC6LX45- 2FGG484C | {::nomarkdown}BPI Flash Memory <b>XCF32P</b> VOG48C{:/} | CN10 | XC7K160T -1FBGC    | {::nomarkdown}BPI Flash Memory PC<i>28F640P30</i>TF65 <b>28F128P30</b>{:/} | CN5 | spec和qsg中rom 型号描述不一致 |
 
 **课题组拥有的几款板子**
 
